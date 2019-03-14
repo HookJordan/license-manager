@@ -1,6 +1,8 @@
 package forms;
 
+import models.Customer;
 import models.User;
+import repository.CustomerRepository;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -32,8 +34,11 @@ public class frmMain {
             model.addColumn("Email Address");
             model.addColumn("Phone Number");
 
-            model.addRow(new Object[] { "0001", "Jordan Hook", "hookjordan@live.com", "+1 (647) 975 2957"});
-            model.addRow(new Object[] { "0002", "Cassandra Chanderpaul", "fakeEmail@live.com", "+1 (647) 975 2957"});
+            // model.addRow(new Object[] { "0001", "Jordan Hook", "hookjordan@live.com", "+1 (647) 975 2957"});
+            // model.addRow(new Object[] { "0002", "Cassandra Chanderpaul", "fakeEmail@live.com", "+1 (647) 975 2957"});
+            for(Customer c : CustomerRepository.getInstance().customerList.values()) {
+                model.addRow(new Object[] { Util.formatId(c.id), c.firstName + " "  + c.lastName, c.email, c.phone });
+            }
 
             customerList.setDefaultEditor(Object.class, null);
 

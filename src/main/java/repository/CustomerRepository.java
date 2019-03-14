@@ -3,6 +3,7 @@ package repository;
 import com.google.gson.Gson;
 import models.Customer;
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import javax.swing.*;
 import java.util.HashMap;
@@ -37,9 +38,16 @@ public class CustomerRepository {
             JOptionPane.showMessageDialog(null, "The customer db file is missing. Please refer to the README for assistance.", "Missing File", JOptionPane.ERROR_MESSAGE);
         } else {
             // File was found
-            JSONArray userArray = new JSONArray(dbAsString);
-            if (userArray.length() == 0) {
+            JSONArray customerArray = new JSONArray(dbAsString);
+            if (customerArray.length() == 0) {
                 JOptionPane.showMessageDialog(null, "The user customer is empty or corrupt. Please refer to the README for assistance.", "Customer DB Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                for(int i = 0; i < customerArray.length(); i++) {
+                    JSONObject customer = customerArray.getJSONObject(i);
+                    Customer c = gson.fromJson(customer.toString(), Customer.class);
+
+                    this.customerList.put(c.id, c);
+                }
             }
         }
     }

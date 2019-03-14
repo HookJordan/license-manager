@@ -3,6 +3,7 @@ package repository;
 import com.google.gson.Gson;
 import models.Product;
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import javax.swing.*;
 import java.util.HashMap;
@@ -37,9 +38,16 @@ public class ProductRepository {
             JOptionPane.showMessageDialog(null, "The product db file is missing. Please refer to the README for assistance.", "Missing File", JOptionPane.ERROR_MESSAGE);
         } else {
             // File was found
-            JSONArray userArray = new JSONArray(dbAsString);
-            if (userArray.length() == 0) {
+            JSONArray productArray = new JSONArray(dbAsString);
+            if (productArray.length() == 0) {
                 JOptionPane.showMessageDialog(null, "The user product is empty or corrupt. Please refer to the README for assistance.", "Product DB Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                for(int i = 0; i < productArray.length(); i++) {
+                    JSONObject product = productArray.getJSONObject(i);
+                    Product p = gson.fromJson(product.toString(), Product.class);
+
+                    this.productList.put(p.id, p);
+                }
             }
         }
     }
