@@ -32,6 +32,21 @@ public class ProductRepository {
         // TODO: write code to load user db
     }
 
+    public Product addRecord(Product product) {
+        // Generate id...
+
+        // Add id to product
+
+        // add product to list
+        this.productList.put(product.id, product);
+
+        // Save changes to db
+        this.saveRecords();
+
+        // return the product
+        return product;
+    }
+
     private void saveRecords() {
         // TODO: write code to export all records
     }

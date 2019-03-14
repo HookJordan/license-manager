@@ -31,6 +31,21 @@ public class CustomerRepository {
         // TODO: write code to load user db
     }
 
+    public Customer addCustomer(Customer customer) {
+        // generate id
+
+        // add id to customer
+
+        // add customer to list
+        this.customerList.put(customer.id, customer);
+
+        // Save db changes
+        this.saveRecords();
+
+        // return customer with id
+        return customer;
+    }
+
     private void saveRecords() {
         // TODO: write code to export all records
     }
