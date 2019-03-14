@@ -1,7 +1,6 @@
 package repository;
 
 import com.google.gson.Gson;
-import models.Customer;
 import models.Product;
 
 import java.util.HashMap;

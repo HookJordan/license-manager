@@ -6,6 +6,8 @@ import repository.UserRepository;
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.logging.Logger;
 
 public class frmLogin {
@@ -32,6 +34,8 @@ public class frmLogin {
             if(targetUser == null || !targetUser.password.equals(password)) {
                 JOptionPane.showMessageDialog(null, "Invalid username or password", "Login Failed", JOptionPane.ERROR_MESSAGE);
             } else {
+                parent.setVisible(false);
+
                 // Login success -- show main form....
                 JFrame mainFrame = new JFrame("License Manager - Login");
                 mainFrame.setContentPane(new forms.frmMain(mainFrame, targetUser).getPanel());
@@ -39,7 +43,16 @@ public class frmLogin {
                 mainFrame.pack();
                 mainFrame.setVisible(true);
 
-                parent.dispose();
+                // Handle logout
+                mainFrame.addWindowListener(new WindowAdapter() {
+                    @Override
+                    public void windowClosed(WindowEvent e) {
+                        super.windowClosed(e);
+                        txtUsername.setText("");
+                        txtPassword.setText("");
+                        parent.setVisible(true);
+                    }
+                });
             }
         });
 
