@@ -29,9 +29,9 @@ Project was built using intellij ide for java. If you wish to view the source / 
   * U: hookjo P: AAAbbb###123 
     * Customer Manager Permissions
     * Product Manager Permissions
-  * U: doejo P: AAAbbb###123
+  * U: piperpe P: Password!123
     * Customer Manager Permissions
-  * U: doeja P: AAAbbb###123
+  * U: chandca P: $ecr3t#
     * Product Manager Permissions
 
 The user.db should be stored in the directory in which you are running from the jar file from. You can add additional user logins or modify existing logins by editing the users.db file. The entries are stored in a json array. Please note in a full implementation of this project, the login system shoud be linked to the companies ldap or active directory for authentication and authorization.

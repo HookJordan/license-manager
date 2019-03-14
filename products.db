@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Anti-Malware",
+    "status": 1,
+    "description": "Malwarebytes Anti-Malware consumer edition"
+  },
+  {
+    "id": 2,
+    "name": "Endpoint Security",
+    "status": 1,
+    "description": "Malwarebytes Endpoint Security For Business"
+  },
+  {
+    "id": 2,
+    "name": "Legacy Anti-Malware",
+    "status": 0,
+    "description": "Legacy version of Anti-Malware"
+  }
+]

@@ -2,7 +2,9 @@ package repository;
 
 import com.google.gson.Gson;
 import models.Customer;
+import org.json.JSONArray;
 
+import javax.swing.*;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
@@ -29,6 +31,17 @@ public class CustomerRepository {
 
     private void loadRecords() {
         // TODO: write code to load user db
+        String dbAsString = Util.fileAsString(this.PATH_REPOSITORY_LOCATION);
+
+        if(dbAsString == null) {
+            JOptionPane.showMessageDialog(null, "The customer db file is missing. Please refer to the README for assistance.", "Missing File", JOptionPane.ERROR_MESSAGE);
+        } else {
+            // File was found
+            JSONArray userArray = new JSONArray(dbAsString);
+            if (userArray.length() == 0) {
+                JOptionPane.showMessageDialog(null, "The user customer is empty or corrupt. Please refer to the README for assistance.", "Customer DB Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
     }
 
     public Customer addCustomer(Customer customer) {

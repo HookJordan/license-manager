@@ -8,15 +8,15 @@
     ]
   },
   {
-    "username": "doejo",
-    "password": "AAABB###123",
+    "username": "piperpe",
+    "password": "Password!123",
     "roles": [
       "customer-manager"
     ]
   },
   {
-    "username": "doeja",
-    "password": "AAABBB###123",
+    "username": "chandca",
+    "password": "$ecr3t#",
     "roles": [
       "product-manager"
     ]

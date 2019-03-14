@@ -7,11 +7,11 @@ public class Customer {
     public String firstName;
     public String lastName;
     public String email;
-    public String phoneNumber;
+    public String phone;
     public String address;
-    public String postalCode;
+    public String postal;
     public String city;
-    public String creditCard;
+    public String credit;
     public String expiration;
     public String cvv;
 
