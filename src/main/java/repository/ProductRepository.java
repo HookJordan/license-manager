@@ -67,7 +67,8 @@ public class ProductRepository {
     }
 
     private void saveRecords() {
-        // TODO: write code to export all records
+        String dbString = gson.toJson(productList);
+        Util.writeFile(PATH_REPOSITORY_LOCATION, dbString);
     }
 
     // TODO: Write searching code for records

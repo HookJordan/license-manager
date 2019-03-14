@@ -2,6 +2,7 @@ package repository;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.logging.Logger;
 
 public class Util {
@@ -16,6 +17,15 @@ public class Util {
             log.info(e.getMessage());
             e.printStackTrace();
             return null;
+        }
+    }
+
+    public static void writeFile(String path, String data) {
+        try {
+            Files.write(Paths.get(path), data.getBytes(), StandardOpenOption.TRUNCATE_EXISTING);
+        } catch (Exception e) {
+            log.info(e.getMessage());
+            e.printStackTrace();
         }
     }
 }

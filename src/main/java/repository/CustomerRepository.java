@@ -54,8 +54,10 @@ public class CustomerRepository {
 
     public Customer addCustomer(Customer customer) {
         // generate id
+        customer.id = this.nextId();
 
         // add id to customer
+        this.customerList.put(customer.id, customer);
 
         // add customer to list
         this.customerList.put(customer.id, customer);
@@ -67,8 +69,19 @@ public class CustomerRepository {
         return customer;
     }
 
+    public int nextId() {
+        int currentMax = 1;
+        for(int key : customerList.keySet()) {
+            if(key > currentMax) {
+                currentMax = key;
+            }
+        }
+        return currentMax + 1;
+    }
+
     private void saveRecords() {
-        // TODO: write code to export all records
+        String dbString = gson.toJson(customerList.values());
+        Util.writeFile(PATH_REPOSITORY_LOCATION, dbString);
     }
 
     // TODO: Write searching code for records

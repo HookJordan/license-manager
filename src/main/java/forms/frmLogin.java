@@ -23,6 +23,11 @@ public class frmLogin {
     private UserRepository userRepository = UserRepository.getInstance();
 
     public frmLogin(JFrame parent) {
+        // TODO: REMOVE THIS
+        txtUsername.setText("hookjo");
+        txtPassword.setText("AAAbbb###123");
+
+
         cancelButton.addActionListener(e ->  { parent.dispose(); });
         loginButton.addActionListener(e -> {
 
@@ -37,10 +42,11 @@ public class frmLogin {
                 parent.setVisible(false);
 
                 // Login success -- show main form....
-                JFrame mainFrame = new JFrame("License Manager - Login");
+                JFrame mainFrame = new JFrame("License Manager - Home");
                 mainFrame.setContentPane(new forms.frmMain(mainFrame, targetUser).getPanel());
                 mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 mainFrame.pack();
+                mainFrame.setSize(640, 480);
                 mainFrame.setVisible(true);
 
                 // Handle logout
