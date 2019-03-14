@@ -1,6 +1,7 @@
 package repository;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import models.Customer;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -13,7 +14,7 @@ public class CustomerRepository {
     final static Logger log = Logger.getAnonymousLogger();
 
     private static CustomerRepository customerRepository;
-    private static Gson gson = new Gson();
+    private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     private final String PATH_REPOSITORY_LOCATION = "customers.db";
     public HashMap<Integer, Customer> customerList = new HashMap<Integer, Customer>();
