@@ -1,0 +1,24 @@
+[
+  {
+    "username": "hookjo",
+    "password": "AAAbbb###123",
+    "roles": [
+      "customer-manager",
+      "product-manager"
+    ]
+  },
+  {
+    "username": "doejo",
+    "password": "AAABB###123",
+    "roles": [
+      "customer-manager"
+    ]
+  },
+  {
+    "username": "doeja",
+    "password": "AAABBB###123",
+    "roles": [
+      "product-manager"
+    ]
+  }
+]
