@@ -53,8 +53,10 @@ public class ProductRepository {
     }
     public Product addRecord(Product product) {
         // Generate id...
+        product.id = this.nextId();
 
         // Add id to product
+        this.productList.put(product.id, product);
 
         // add product to list
         this.productList.put(product.id, product);
@@ -64,6 +66,16 @@ public class ProductRepository {
 
         // return the product
         return product;
+    }
+
+    public int nextId() {
+        int currentMax = 1;
+        for(int key : productList.keySet()) {
+            if(key > currentMax) {
+                currentMax = key;
+            }
+        }
+        return currentMax + 1;
     }
 
     private void saveRecords() {
