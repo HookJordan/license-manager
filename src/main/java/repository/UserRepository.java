@@ -14,8 +14,8 @@ public class UserRepository {
 
     private static UserRepository userRepository;
     private static Gson gson = new Gson();
-    private final String PATH_REPOSITORY_LOCATION = "users.db";
 
+    private final String PATH_REPOSITORY_LOCATION = "users.db";
     public HashMap<String, User> userList = new HashMap<String, User>();
 
     public static UserRepository getInstance() {
