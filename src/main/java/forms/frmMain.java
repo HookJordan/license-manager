@@ -9,6 +9,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.logging.Logger;
 
 public class frmMain {
@@ -50,17 +52,52 @@ public class frmMain {
 
         logoutButton.addActionListener(e -> { parent.dispose(); });
 
+        productManagerButton.addActionListener(e -> {
+            productManagerButton.setEnabled(false);
+
+            JFrame productFrame = new JFrame("License Manager - Products");
+            productFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+            productFrame.setContentPane(new frmProductManager().getPanel());
+            productFrame.pack();
+            productFrame.setSize(640, 480);
+            productFrame.setVisible(true);
+
+            productFrame.addWindowListener(new WindowAdapter() {
+                @Override
+                public void windowClosed(WindowEvent e) {
+                    super.windowClosed(e);
+                    productManagerButton.setEnabled(true);
+                }
+            });
+
+            productManagerButton.enable();
+        });
+
         customerManagerButton.addActionListener(e -> {
-            Customer c = new Customer();
+            customerManagerButton.setEnabled(false);
+            customerList.setEnabled(false);
 
-            c.firstName = "Test";
-            c.lastName = "Tester";
-            c.email = "test@tester.com";
-            c.phone = "+1 (647) 905-4169";
+            JFrame customerFrame = new JFrame("License Manager - Customer");
+            frmCustomerManager customerManager = new frmCustomerManager();
+            customerFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+            customerFrame.setContentPane(customerManager.getPanel());
+            customerFrame.pack();
+            customerFrame.setSize(640, 480);
+            customerFrame.setVisible(true);
 
-            CustomerRepository.getInstance().addCustomer(c);
+            customerFrame.addWindowListener(new WindowAdapter() {
+                @Override
+                public void windowClosed(WindowEvent e) {
+                    super.windowClosed(e);
 
-            loadTable();
+                    // Enable buttons
+                    customerManagerButton.setEnabled(true);
+                    customerList.setEnabled(true);
+
+                    // Reload recent list in case it changed
+                    loadTable();
+                }
+            });
         });
     }
 

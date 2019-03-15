@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
@@ -80,9 +81,43 @@ public class ProductRepository {
     }
 
     private void saveRecords() {
-        String dbString = gson.toJson(productList);
+        String dbString = gson.toJson(productList.values());
         Util.writeFile(PATH_REPOSITORY_LOCATION, dbString);
     }
 
-    // TODO: Write searching code for records
+    public void RemoveRecord(int id) {
+        this.productList.remove(id);
+        saveRecords();
+    }
+
+    public void UpdateRecord(int id, Product model) {
+        this.productList.put(id, model);
+        saveRecords();
+    }
+
+    public ArrayList<Product> searchProducts(String name, Integer status) {
+        log.info("Searching product repository for name : " + name + ", status : " + status);
+
+        ArrayList<Product> rtnList = new ArrayList<Product>();
+
+        for(Product p : this.productList.values()) {
+            if(name != null && status != null) {
+                if(p.name.toLowerCase().contains(name.toLowerCase()) && p.status == status) {
+                    rtnList.add(p);
+                }
+            } else if (name != null) {
+                if(p.name.toLowerCase().contains(name.toLowerCase())) {
+                    rtnList.add(p);
+                }
+            } else if (status != null) {
+                if(p.status == status) {
+                    rtnList.add(p);
+                }
+            } else {
+                rtnList.add(p);
+            }
+        }
+
+        return rtnList;
+    }
 }

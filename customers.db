@@ -1,1 +1,43 @@
-[{"id":1,"firstName":"Jordan","lastName":"Hook","email":"hookjordan@live.com","phone":"+1 (111) 123-1234","address":"123 Test Street","postal":"M1M 1M1","city":"Toronto","credit":"","expiration":"","cvv":"","customerProducts":{"1":"2019-12-25","3":"2018-12-31"}},{"id":2,"firstName":"Cassandra","lastName":"Chanderpaul","email":"cass@not-real.com","phone":"+1 (222) 416-2652","address":"789 Example Road","postal":"M1N 2N3","city":"Toronto","credit":"","expiration":"","cvv":"","customerProducts":{"2":"2019-12-25"}},{"id":3,"firstName":"Test","lastName":"Tester","email":"test@tester.com","phone":"+1 (647) 905-4169","customerProducts":{}},{"id":4,"firstName":"Test","lastName":"Tester","email":"test@tester.com","phone":"+1 (647) 905-4169","customerProducts":{}}]
+[
+  {
+    "id": 1,
+    "firstName": "Jordan",
+    "lastName": "Hook",
+    "email": "hookjordan@live.com",
+    "phone": "+1 (111) 123-1234",
+    "address": "123 Test Street",
+    "postal": "M1M 1M1",
+    "city": "Toronto",
+    "credit": "",
+    "expiration": "",
+    "cvv": "",
+    "customerProducts": {
+      "1": "2019-12-25",
+      "3": "2018-12-31"
+    }
+  },
+  {
+    "id": 2,
+    "firstName": "Cassandra",
+    "lastName": "Chanderpaul",
+    "email": "cass@not-real.com",
+    "phone": "+1 (222) 416-2652",
+    "address": "789 Example Road",
+    "postal": "M1N 2N3",
+    "city": "Toronto",
+    "credit": "",
+    "expiration": "",
+    "cvv": "",
+    "customerProducts": {
+      "2": "2019-12-25"
+    }
+  },
+  {
+    "id": 3,
+    "firstName": "Test",
+    "lastName": "Tester",
+    "email": "test@tester.com",
+    "phone": "+1 (647) 905-4169",
+    "customerProducts": {}
+  }
+]
