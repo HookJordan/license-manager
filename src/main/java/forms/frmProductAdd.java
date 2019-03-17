@@ -4,8 +4,6 @@ import models.Product;
 import repository.ProductRepository;
 
 import javax.swing.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 public class frmProductAdd {
@@ -53,7 +51,7 @@ public class frmProductAdd {
         saveButton.addActionListener(e -> {
             boolean isValid = true;
 
-            if(this.model.name.length() == 0 || this.model.description.length() == 0) {
+            if(txtName.getText().length() == 0 || txtDescription.getText().length() == 0) {
                 isValid = false;
             }
 
@@ -75,6 +73,8 @@ public class frmProductAdd {
                 parent.dispose();
             }
         });
+
+
     }
 
     public JPanel getPanel() {

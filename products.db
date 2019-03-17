@@ -10,5 +10,11 @@
     "name": "Legacy Anti-Malware",
     "status": 2,
     "description": "Legacy version of Anti-Malware"
+  },
+  {
+    "id": 3,
+    "name": "Example Product",
+    "status": 1,
+    "description": "This is an example product."
   }
 ]

@@ -7,10 +7,7 @@ import repository.CustomerRepository;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.logging.Logger;
@@ -48,8 +45,6 @@ public class frmMain {
         if(!user.roles.contains("product-manager")) {
             // Disable product panel
             productManagerButton.setEnabled(false);
-        } else {
-
         }
 
         logoutButton.addActionListener(e -> { parent.dispose(); });
@@ -101,6 +96,20 @@ public class frmMain {
                 }
             });
         });
+
+        customerList.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+
+                if(e.getClickCount() == 2) {
+                    int row = customerList.getSelectedRow();
+                    int customerId = Integer.parseInt((String)customerList.getValueAt(row, 0));
+
+                    handleCustomerForm(CustomerRepository.getInstance().customerList.get(customerId));
+                }
+            }
+        });
     }
 
     public JPanel getPanel() {
@@ -121,12 +130,36 @@ public class frmMain {
         }
 
         customerList.setDefaultEditor(Object.class, null);
+    }
 
-        // Handle on row click
-        customerList.getSelectionModel().addListSelectionListener(e -> {
-            String customerId = customerList.getValueAt(customerList.getSelectedRow(), 0).toString();
-            log.info("SELECTED CUSTOMER " + customerId);
+    private void handleCustomerForm(Customer model) {
+        customerManagerButton.setEnabled(false);
+        customerList.setEnabled(false);
 
+        JFrame cFrame = new JFrame("License Manager - Customer");
+        cFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frmCustomerAdd form = model == null ? new frmCustomerAdd(cFrame) : new frmCustomerAdd(cFrame, model);
+        cFrame.setContentPane(form.getPanel());
+        cFrame.pack();
+        cFrame.setVisible(true);
+
+        cFrame.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosed(WindowEvent e) {
+                super.windowClosed(e);
+                customerManagerButton.setEnabled(true);
+                customerList.setEnabled(true);
+
+                if(form.model != null) {
+                    if(model != null) {
+                        CustomerRepository.getInstance().updateRecord(model.id, form.model);
+                    } else {
+                        CustomerRepository.getInstance().addCustomer(form.model);
+                    }
+                }
+
+                loadTable();
+            }
         });
     }
 }

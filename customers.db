@@ -29,14 +29,15 @@
     "expiration": "12/2019",
     "cvv": "988",
     "customerProducts": {
-      "2": "2019-12-25"
+      "1": "2021-01-31",
+      "2": "2018-03-14"
     }
   },
   {
     "id": 3,
     "firstName": "Bryan",
     "lastName": "Lavallee",
-    "email": "blavallee@gmail.com",
+    "email": "blavallee@hotmail.com",
     "phone": "+1 (647) 905-4169",
     "address": "1290 Another Street",
     "postal": "L4R 2N7",
@@ -44,6 +45,9 @@
     "credit": "4222222222222222",
     "expiration": "01/2023",
     "cvv": "123",
-    "customerProducts": {}
+    "customerProducts": {
+      "1": "2019-08-24",
+      "3": "2019-03-18"
+    }
   }
 ]
