@@ -104,7 +104,8 @@ public class frmProductManager {
         newProductButton.setEnabled(false);
         productTable.setEnabled(false);
 
-        JFrame pFrame = new JFrame("License Manager - New Product");
+
+        JFrame pFrame = new JFrame("License Manager - Product");
         pFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frmProductAdd form = model == null ? new frmProductAdd(pFrame) : new frmProductAdd(pFrame, model);
         pFrame.setContentPane(form.getPanel());

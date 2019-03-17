@@ -57,8 +57,6 @@ public class ProductRepository {
         // Generate id...
         product.id = this.nextId();
 
-        // Add id to product
-        this.productList.put(product.id, product);
 
         // add product to list
         this.productList.put(product.id, product);

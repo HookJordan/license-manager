@@ -4,6 +4,8 @@ import models.Product;
 import repository.ProductRepository;
 
 import javax.swing.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 public class frmProductAdd {
@@ -44,16 +46,12 @@ public class frmProductAdd {
         cboStatus.setModel(new DefaultComboBoxModel(statusOptions.toArray()));
 
         cancelButton.addActionListener(e -> {
-            model = null;
+            this.model = null;
             parent.dispose();
         });
 
         saveButton.addActionListener(e -> {
             boolean isValid = true;
-
-            this.model.name = txtName.getText();
-            this.model.status = cboStatus.getSelectedIndex() + 1;
-            this.model.description = txtDescription.getText();
 
             if(this.model.name.length() == 0 || this.model.description.length() == 0) {
                 isValid = false;
@@ -62,6 +60,10 @@ public class frmProductAdd {
             if(!isValid) {
                 JOptionPane.showMessageDialog(null, "Error, some of the data field are incorrect.", "Invalid Fields", JOptionPane.WARNING_MESSAGE);
             } else {
+                this.model.name = txtName.getText();
+                this.model.status = cboStatus.getSelectedIndex() + 1;
+                this.model.description = txtDescription.getText();
+
                 parent.dispose();
             }
         });

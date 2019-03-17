@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
@@ -57,9 +58,6 @@ public class CustomerRepository {
         // generate id
         customer.id = this.nextId();
 
-        // add id to customer
-        this.customerList.put(customer.id, customer);
-
         // add customer to list
         this.customerList.put(customer.id, customer);
 
@@ -80,10 +78,45 @@ public class CustomerRepository {
         return currentMax + 1;
     }
 
+    public void updateRecord(int id, Customer customer) {
+        this.customerList.put(id, customer);
+        this.saveRecords();
+    }
+
+    public void deleteRecord(int id) {
+        this.customerList.remove(id);
+        this.saveRecords();
+    }
+
     private void saveRecords() {
         String dbString = gson.toJson(customerList.values());
         Util.writeFile(PATH_REPOSITORY_LOCATION, dbString);
     }
 
-    // TODO: Write searching code for records
+    public ArrayList<Customer> searchCustomers(String name, String email) {
+        log.info("Searching Customer repository for name : " + name + ", email : " + email);
+
+        ArrayList<Customer> results = new ArrayList<>();
+
+        for(Customer c : this.customerList.values()) {
+            String customerName = c.firstName + " " + c.lastName;
+            if(name != null && email != null ){
+                if(customerName.toLowerCase().contains(name.toLowerCase()) && c.email.toLowerCase().contains(email.toLowerCase())) {
+                    results.add(c);
+                }
+            } else if (name != null) {
+              if(customerName.toLowerCase().contains(name.toLowerCase())) {
+                  results.add(c);
+              }
+            } else if (email != null) {
+                if(c.email.toLowerCase().contains(email.toLowerCase())) {
+                    results.add(c);
+                }
+            } else {
+                results.add(c);
+            }
+        }
+
+        return results;
+    }
 }

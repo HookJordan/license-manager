@@ -11,6 +11,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.logging.Logger;
 
 public class frmMain {
@@ -111,9 +113,10 @@ public class frmMain {
 
         model.setRowCount(0);
 
-        // model.addRow(new Object[] { "0001", "Jordan Hook", "hookjordan@live.com", "+1 (647) 975 2957"});
-        // model.addRow(new Object[] { "0002", "Cassandra Chanderpaul", "fakeEmail@live.com", "+1 (647) 975 2957"});
-        for(Customer c : CustomerRepository.getInstance().customerList.values()) {
+        ArrayList<Customer> recentCustomers = new ArrayList<Customer>(CustomerRepository.getInstance().customerList.values());
+        Collections.sort(recentCustomers, Collections.reverseOrder());
+
+        for(Customer c : recentCustomers) {
             model.addRow(new Object[] { Util.formatId(c.id), c.firstName + " "  + c.lastName, c.email, c.phone });
         }
 

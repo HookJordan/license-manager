@@ -2,8 +2,8 @@ package models;
 
 import java.util.HashMap;
 
-public class Customer {
-    public int id;
+public class Customer implements Comparable<Customer> {
+    public Integer id;
     public String firstName;
     public String lastName;
     public String email;
@@ -17,4 +17,10 @@ public class Customer {
 
     // Product Id, expiration
     public HashMap<Integer, String> customerProducts = new HashMap<Integer, String>();
+
+    @Override
+    public int compareTo(Customer c) {
+        return this.id.compareTo(c.id);
+    }
+
 }
