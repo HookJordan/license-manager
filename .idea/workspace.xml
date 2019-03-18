@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be9e37c1-900d-4cbc-8a97-04d198bc3e97" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customers.db" beforeDir="false" afterPath="$PROJECT_DIR$/customers.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/forms/frmCustomerAdd$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/forms/frmCustomerAdd$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/forms/frmCustomerAdd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/forms/frmCustomerAdd.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/forms/frmCustomerProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/forms/frmCustomerProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/forms/frmProductAdd$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/forms/frmProductAdd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/forms/frmProductAdd.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products.db" beforeDir="false" afterPath="$PROJECT_DIR$/products.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forms/frmCustomerAdd.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forms/frmCustomerAdd.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forms/frmCustomerAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forms/frmCustomerAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forms/frmCustomerProduct.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forms/frmCustomerProduct.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forms/frmCustomerProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forms/frmCustomerProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forms/frmMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forms/frmMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forms/frmProductAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forms/frmProductAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/forms/frmLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forms/frmLogin.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -59,11 +48,53 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/forms/frmCustomerAdd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="65" column="122" lean-forward="true" selection-start-line="65" selection-start-column="122" selection-end-line="65" selection-end-column="122" />
+            <state relative-caret-position="210">
+              <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users.db">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repository/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/forms/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/forms/frmLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,7 +129,6 @@
         <option value="$PROJECT_DIR$/users.db" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/models/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/forms/frmLogin.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/forms/Util.java" />
@@ -120,6 +150,7 @@
         <option value="$PROJECT_DIR$/src/main/java/forms/frmMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/forms/frmProductAdd.java" />
         <option value="$PROJECT_DIR$/src/main/java/forms/frmCustomerAdd.java" />
+        <option value="$PROJECT_DIR$/src/main/java/forms/frmLogin.java" />
       </list>
     </option>
   </component>
@@ -239,14 +270,14 @@
     <frame x="0" y="23" width="1680" height="963" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15689866" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15689866" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295063" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295063" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295063" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39839265" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -327,48 +358,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users.db">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/awt/Container.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="1096" selection-start-line="1096" selection-end-line="1096" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forms/frmLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/forms/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -534,8 +527,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/forms/frmCustomerAdd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="65" column="122" lean-forward="true" selection-start-line="65" selection-start-column="122" selection-end-line="65" selection-end-column="122" />
+        <state relative-caret-position="210">
+          <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users.db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/forms/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/forms/frmLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

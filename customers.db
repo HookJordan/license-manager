@@ -4,7 +4,7 @@
     "firstName": "Jordan",
     "lastName": "Hook",
     "email": "hookjordan@live.com",
-    "phone": "+1 (111) 123-1234",
+    "phone": "+1 (222) 123-1234",
     "address": "123 Test Street",
     "postal": "M1M 1M1",
     "city": "Toronto",
@@ -48,6 +48,38 @@
     "customerProducts": {
       "1": "2019-08-24",
       "3": "2019-03-18"
+    }
+  },
+  {
+    "id": 4,
+    "firstName": "Athabasca",
+    "lastName": "University",
+    "email": "au@example.com",
+    "phone": "+1 (647) 999-9999",
+    "address": "123 AU street",
+    "postal": "T1T 1T1",
+    "city": "Somewhere",
+    "credit": "",
+    "expiration": "",
+    "cvv": "",
+    "customerProducts": {
+      "4": "2019-03-18"
+    }
+  },
+  {
+    "id": 5,
+    "firstName": "Beverly ",
+    "lastName": "Smith",
+    "email": "bsmtih@example.ca",
+    "phone": "+1 (416) 999-9999",
+    "address": "123 John St",
+    "postal": "M1M1M1",
+    "city": "Scarborough",
+    "credit": "012345678901234",
+    "expiration": "0321",
+    "cvv": "111",
+    "customerProducts": {
+      "1": "2019-03-21"
     }
   }
 ]

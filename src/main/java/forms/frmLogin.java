@@ -23,11 +23,6 @@ public class frmLogin {
     private UserRepository userRepository = UserRepository.getInstance();
 
     public frmLogin(JFrame parent) {
-        // TODO: REMOVE THIS
-        txtUsername.setText("hookjo");
-        txtPassword.setText("AAAbbb###123");
-
-
         cancelButton.addActionListener(e ->  { parent.dispose(); });
         loginButton.addActionListener(e -> {
 

@@ -16,5 +16,17 @@
     "name": "Example Product",
     "status": 1,
     "description": "This is an example product."
+  },
+  {
+    "id": 4,
+    "name": "Athabasca Anti-Malware",
+    "status": 1,
+    "description": "For youtube!!!"
+  },
+  {
+    "id": 5,
+    "name": "Malwarebytes Endpoint Protection",
+    "status": 1,
+    "description": "Endpoint protection for business users."
   }
 ]
